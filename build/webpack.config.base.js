@@ -24,7 +24,7 @@ const webpackConfig = helper.configCreator({
               loader: 'css-loader',
               options: {
                 modules: true,
-                localIdentName: '[path]__[name]__[local]__[hash:base64:5]',
+                localIdentName: '[path][name]__[local]--[hash:base64:5]',
                 hashPrefix: 'hash',
                 importLoaders: 1,
               },

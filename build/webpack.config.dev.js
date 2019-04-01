@@ -65,6 +65,7 @@ webpackConfig.plugins = [
   new ExtractCSSChunks({
     filename: '[name].css',
     chunkFilename: '[id].chunk.css',
+    orderWarning: true,
   }),
   new DefinePlugin({
     'process.env': {

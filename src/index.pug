@@ -1,3 +1,8 @@
+include ./template/variable-partials
+include ./template/element-mixin-partials
+include ./template/placeholder-mixin-partials
+
+- locals.localIdentName = require('!isomorphic-style-loader!css-loader?modules=true&localIdentName=[path][name]__[local]--[hash:base64:5]&hashPrefix=hash!postcss-loader?ident=postcss!CSS/entry/app.css');
 doctype html
 html
   head
@@ -7,3 +12,8 @@ html
   body
     main#main.container(role="main")
       .wrapper
+        each category in locals.categories
+          input.category-emit(type='radio', id=category, name='categories')
+        input.category-cancel(type='radio', id='cancel' name='categories')
+        .table-container
+          include ./template/element-partials

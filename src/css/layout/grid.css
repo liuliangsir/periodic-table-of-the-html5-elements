@@ -1,0 +1,4 @@
+@for $i from 1 to 18 {
+  :global(.r$(i)) { grid-row: $(i); }
+  :global(.c$(i)) { grid-column: $(i); }
+}

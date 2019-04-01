@@ -1,0 +1,3 @@
+@define-function size($width, $column, $gap) {
+  @return ($width - $gap * ($column - 1)) / $column;
+}

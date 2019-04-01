@@ -1,0 +1,17 @@
+mixin elementGenerator(number, name, desc, links, classname, column, row)
+  - const localIdentName = locals.localIdentName;
+  div(class=`${localIdentName.element} ${classname} c${column} r${row}`)
+    input(type='radio', name='elements', class=`${localIdentName.activate}`)
+    dialog(class=`${localIdentName.square}`)
+      form(method='dialog', class=`${classname}`)
+        label(class=`${localIdentName.number}`)= number
+        dl(class=`${localIdentName.info}`)
+          dd(class=`${localIdentName.name}`, title=`${name}`)= name
+          dt(class=`${localIdentName.desc}`, title=`${desc}`)= desc
+        ul(class=`${localIdentName.links}`)
+          each link, index in links.reverse()
+            if index < 1 && links.length > 1
+              li: a(href=link target='_blank') MDN
+            else
+              li: a(href=link target='_blank') W3C
+    input(type='radio', name='elements', class=`${localIdentName.deactivate}`)

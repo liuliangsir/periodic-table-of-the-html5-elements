@@ -1,0 +1,35 @@
+:global(.alkali-metal) {
+  color: var(--alkali-metal-color);
+}
+
+:global(.alkaline-earth-metal) {
+  color: var(--alkaline-earth-metal-color);
+}
+
+:global(.lanthanoid) {
+  color: var(--lanthanoid-color);
+}
+
+:global(.actinoid) {
+  color: var(--actinoid-color);
+}
+
+:global(.transition-metal) {
+  color: var(--transition-metal-color);
+}
+
+:global(.post-transition-metal) {
+  color: var(--post-transition-metal-color);
+}
+
+:global(.metalloid) {
+  color: var(--metalloid-color);
+}
+
+:global(.other-nonmetal) {
+  color: var(--other-nonmetal-color);
+}
+
+:global(.noble-gas) {
+  color: var(--noble-gas-color);
+}

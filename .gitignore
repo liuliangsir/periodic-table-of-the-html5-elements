@@ -125,3 +125,6 @@ typings/
 
 # cache loader for webpack
 .cache-loader
+
+# .vscode directory for vscode
+.vscode
