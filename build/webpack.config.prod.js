@@ -19,7 +19,7 @@ webpackConfig.module.rules.forEach(rule => {
 });
 
 webpackConfig.plugins = [
-  new CleanWebpackPlugin(resolve(commonConfig.rootPath, 'dist'), {}),
+  new CleanWebpackPlugin(resolve(commonConfig.rootPath, 'dist')),
   new MiniCSSExtractPlugin({
     name: '[name].[chunkhash].css',
     chunkFilename: '[id].[chunkhash].chunk.css',
@@ -73,12 +73,19 @@ webpackConfig.optimization = {
   minimizer: [
     new UglifyJSPlugin({
       include: /\.min\.js$/,
-      sourceMap: true,
+      sourceMap: false,
+      output: {
+        comments: false,
+        ascii_only: true,
+      },
+      compress: {
+        comparisons: false,
+      },
     }),
     new TerserPlugin({
       cache: true,
       parallel: true,
-      sourceMap: true,
+      sourceMap: false,
       terserOptions: {},
     }),
     new OptimizeCSSAssetsPlugin({}),
