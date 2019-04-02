@@ -1,10 +1,9 @@
 /* eslint-disable import/no-extraneous-dependencies */
 const unprefix = require('postcss-unprefix');
 
-module.exports = ({ file, options, env }) => ({
+module.exports = ({ file }) => ({
   parser: file.extname === '.sss' ? 'sugarss' : false,
   plugins: {
-    cssnano: env === 'production' ? options.cssnano : false,
     'postcss-at-rules-variables': {},
     'postcss-import': { root: file.dirname },
     'postcss-easy-import': {},

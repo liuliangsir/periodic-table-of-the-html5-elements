@@ -1,6 +1,6 @@
 mixin elementGenerator(number, name, desc, links, classname, column, row)
   - const localIdentName = locals.localIdentName;
-  div(class=`${localIdentName.element} ${classname} c${column} r${row}`)
+  div(class=`${localIdentName.element} ${localIdentName[classname]} c${column} r${row}`)
     input(type='radio', name='elements', class=`${localIdentName.activate}`)
     dialog(class=`${localIdentName.square}`)
       form(method='dialog', class=`${classname}`)

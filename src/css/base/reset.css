@@ -14,6 +14,12 @@ ul,
 ol {
   margin-top: 0;
   margin-bottom: 0;
+  padding-left: 0;
+}
+
+ul,
+ol {
+  list-style-type: none;
 }
 
 dd {
@@ -23,6 +29,5 @@ dd {
 dialog {
   &::backdrop {
     transition-duration: 500ms;
-    pointer-events: none;
   }
 }
