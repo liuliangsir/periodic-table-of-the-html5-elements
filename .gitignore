@@ -128,3 +128,6 @@ typings/
 
 # .vscode directory for vscode
 .vscode
+
+# dist
+dist

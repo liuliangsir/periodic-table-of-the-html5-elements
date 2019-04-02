@@ -1,0 +1,95 @@
+:global(.category-emit:checked ~ .category-cancel) {
+  visibility: visible;
+  pointer-events: all;
+}
+
+@define-mixin element-switcher {
+  opacity: .15;
+  pointer-events: none;
+}
+@define-mixin category-switcher {
+  opacity: .15;
+}
+
+:global(.category-emit:checked#metadata-and-scripting ~ .table-container) {
+  & :local .element:not(.metadata-and-scripting) {
+    @mixin element-switcher;
+  }
+  & :global .categories .category:not(.metadata-and-scripting) {
+    @mixin category-switcher;
+  }
+}
+
+:global(.category-emit:checked#text-level-semantics ~ .table-container) {
+  & :local .element:not(.text-level-semantics) {
+    @mixin element-switcher;
+  }
+  & :global .categories .category:not(.text-level-semantics) {
+    @mixin category-switcher;
+  }
+}
+
+:global(.category-emit:checked#embedding-content ~ .table-container) {
+  & :local .element:not(.embedding-content) {
+    @mixin element-switcher;
+  }
+  & :global .categories .category:not(.embedding-content) {
+    @mixin category-switcher;
+  }
+}
+
+:global(.category-emit:checked#document-sections ~ .table-container) {
+  & :local .element:not(.document-sections) {
+    @mixin element-switcher;
+  }
+  & :global .categories .category:not(.document-sections) {
+    @mixin category-switcher;
+  }
+}
+
+:global(.category-emit:checked#grouping-content ~ .table-container) {
+  & :local .element:not(.grouping-content) {
+    @mixin element-switcher;
+  }
+  & :global .categories .category:not(.grouping-content) {
+    @mixin category-switcher;
+  }
+}
+
+:global(.category-emit:checked#forms ~ .table-container) {
+  & :local .element:not(.forms) {
+    @mixin element-switcher;
+  }
+  & :global .categories .category:not(.forms) {
+    @mixin category-switcher;
+  }
+}
+
+:global(.category-emit:checked#interactive-elements ~ .table-container) {
+  & :local .element:not(.interactive-elements) {
+    @mixin element-switcher;
+  }
+  & :global .categories .category:not(.interactive-elements) {
+    @mixin category-switcher;
+  }
+}
+
+:global(.category-emit:checked#root-element ~ .table-container) {
+  & :local .element:not(.root-element) {
+    @mixin element-switcher;
+  }
+  & :global .categories .category:not(.root-element) {
+    @mixin category-switcher;
+  }
+}
+
+:global(.category-emit:checked#tabular-data ~ .table-container) {
+  & :local .element:not(.tabular-data) {
+    @mixin element-switcher;
+  }
+  & :global .categories .category:not(.tabular-data) {
+    @mixin category-switcher;
+  }
+}
+
+
