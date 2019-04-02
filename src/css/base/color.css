@@ -1,0 +1,44 @@
+.metadata-and-scripting,
+:global(.metadata-and-scripting) {
+  color: var(--alkali-metal-color);
+}
+
+.text-level-semantics,
+:global(.text-level-semantics) {
+  color: var(--alkaline-earth-metal-color);
+}
+
+.embedding-content,
+:global(.embedding-content) {
+  color: var(--lanthanoid-color);
+}
+
+.document-sections,
+:global(.document-sections) {
+  color: var(--actinoid-color);
+}
+
+.grouping-content,
+:global(.grouping-content) {
+  color: var(--transition-metal-color);
+}
+
+.forms,
+:global(.forms) {
+  color: var(--post-transition-metal-color);
+}
+
+.interactive-elements,
+:global(.interactive-elements) {
+  color: var(--metalloid-color);
+}
+
+.root-element,
+:global(.root-element) {
+  color: var(--other-nonmetal-color);
+}
+
+.tabular-data,
+:global(.tabular-data) {
+  color: var(--noble-gasses-color);
+}

@@ -1,21 +1,18 @@
 /* eslint-disable import/no-extraneous-dependencies */
 const unprefix = require('postcss-unprefix');
 
-module.exports = ({ file, options, env }) => ({
+module.exports = ({ file }) => ({
   parser: file.extname === '.sss' ? 'sugarss' : false,
   plugins: {
-    cssnano: env === 'production' ? options.cssnano : false,
+    'postcss-at-rules-variables': {},
     'postcss-import': { root: file.dirname },
     'postcss-easy-import': {},
     'postcss-url': {},
     'postcss-mixins': {},
-    'postcss-nested': {},
-    'postcss-normalize': {},
-    oldie: {},
-    'postcss-font-family-system-ui': {
-      family:
-        'system-ui, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif',
-    },
+    'postcss-for': {},
+    'postcss-define-function': {},
+    'postcss-calc': {},
+    'postcss-normalize': { forceImport: true },
     'postcss-preset-env': {
       autoprefixer: {
         grid: true,
@@ -23,6 +20,8 @@ module.exports = ({ file, options, env }) => ({
       features: {
         'nesting-rules': true,
         'color-mod-function': { unresolved: 'warn' },
+        'custom-properties': { preserve: false },
+        'system-ui-font-family': { family: 'system-ui, Helvetica Neue' },
       },
       insertBefore: {
         'all-property': unprefix,

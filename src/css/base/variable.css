@@ -1,5 +1,7 @@
 :root {
-  --grid-gap: 5px;
+  --grid-gap: 5;
+  --column-count: 18;
+  --row-count: 9;
   --bg-color: #101318;
   --alkali-metal-color: #ecbe59;
   --alkaline-earth-metal-color: #dee955;
@@ -9,6 +11,6 @@
   --post-transition-metal-color: #4cddf3;
   --metalloid-color: #3aefb6;
   --other-nonmetal-color: #52ee61;
-  --noble-gas-color: #759fff;
-  --unknown-color: #ccc;
+  --noble-gasses-color: #759fff;
+  --cell-max-width: calc((96vw - (var(--column-count) - 1) * var(--grid-gap) * 1px) / var(--column-count));
 }

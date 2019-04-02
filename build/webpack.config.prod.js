@@ -1,13 +1,14 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
-const TerserPlugin = require('terser-webpack-plugin');
 const MiniCSSExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const HashedModuleIdsPlugin = require('webpack/lib/HashedModuleIdsPlugin');
 const DefinePlugin = require('webpack/lib/DefinePlugin');
 const WebpackMd5Hash = require('webpack-md5-hash');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+// const InlineManifestWebpackPlugin = require('inline-manifest-webpack-plugin');
 const webpack = require('webpack');
+const cssnano = require('cssnano');
 const { resolve } = require('path');
 const { webpackConfig, commonConfig } = require('./webpack.config.base');
 
@@ -19,7 +20,7 @@ webpackConfig.module.rules.forEach(rule => {
 });
 
 webpackConfig.plugins = [
-  new CleanWebpackPlugin(resolve(commonConfig.rootPath, 'dist'), {}),
+  new CleanWebpackPlugin(),
   new MiniCSSExtractPlugin({
     name: '[name].[chunkhash].css',
     chunkFilename: '[id].[chunkhash].chunk.css',
@@ -38,6 +39,7 @@ webpackConfig.plugins = [
   }),
   new HashedModuleIdsPlugin(),
   new HtmlWebpackPlugin({
+    inject: true,
     filename: 'index.html',
     template: commonConfig.indexTemplate,
     chunksSortMode: 'manual',
@@ -50,15 +52,18 @@ webpackConfig.plugins = [
       removeStyleLinkTypeAttributes: true,
       useShortDoctype: true,
     },
-    templateParameters: {},
     meta: {
+      'theme-color': '#333',
       'Content-Security-Policy': {
         'http-equiv': 'Content-Security-Policy',
         content:
           "default-src https:; font-src 'self' data:; script-src https: 'unsafe-inline'; style-src https: 'unsafe-inline'", // eslint-disable-line quotes
       },
     },
+    title: 'periodic table of the html5 elements',
+    favicon: resolve(commonConfig.rootPath, 'src', 'img', 'favicon.ico'),
   }),
+  // new InlineManifestWebpackPlugin('manifest'),
   new WebpackMd5Hash(),
 ].concat(webpackConfig.plugins);
 
@@ -66,22 +71,32 @@ webpackConfig.output.filename = '[name].[chunkhash].js';
 webpackConfig.output.chunkFilename = '[name].[chunkhash].chunk.js';
 
 // eslint-disable-next-line  import/no-dynamic-require
-const { prefix, address } = require(resolve(commonConfig.rootPath, 'project.config.js'));
-webpackConfig.output.publicPath = prefix + address;
+const { address } = require(resolve(commonConfig.rootPath, 'project.config.js'));
+webpackConfig.output.publicPath = address;
 
+// eslint-disable-next-line  import/no-dynamic-require
+const cssProcessorOptions = require(resolve(commonConfig.rootPath, 'cssnano.config.js'));
 webpackConfig.optimization = {
   minimizer: [
     new UglifyJSPlugin({
-      include: /\.min\.js$/,
-      sourceMap: true,
-    }),
-    new TerserPlugin({
+      exclude: /\.min\.js$/,
       cache: true,
       parallel: true,
-      sourceMap: true,
-      terserOptions: {},
+      sourceMap: false,
+      extractComments: false,
+      uglifyOptions: {
+        compress: {
+          drop_console: true,
+        },
+        output: {},
+      },
     }),
-    new OptimizeCSSAssetsPlugin({}),
+    new OptimizeCSSAssetsPlugin({
+      assetNameRegExp: /\.css$/g,
+      canPrint: true,
+      cssProcessor: cssnano,
+      cssProcessorOptions,
+    }),
   ],
   runtimeChunk: {
     name: 'manifest',
@@ -92,12 +107,6 @@ webpackConfig.optimization = {
     maxInitialRequests: 9,
     name: false,
     cacheGroups: {
-      styles: {
-        test: /\.css$/,
-        name: 'styles',
-        chunks: 'all',
-        enforce: true,
-      },
       commons: {
         test: /^(?!(?:.*[\\/]node_modules[\\/])).*/,
         name: 'commons',
@@ -109,8 +118,7 @@ webpackConfig.optimization = {
         test: /[\\/]node_modules[\\/]/,
         name: 'vendors',
         chunks: 'initial',
-        minChunks: 2,
-        reuseExistingChunk: true,
+        minChunks: 1,
       },
     },
   },

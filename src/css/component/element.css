@@ -1,0 +1,150 @@
+.element {
+  position: relative;
+  font-size: 0.5vw;
+  padding-bottom: 100%;
+  transition-duration: 500ms;
+
+  & .square,
+  & form,
+  & .info {
+    width: 100%;
+    height: 100%;
+  }
+
+  & .square {
+    top: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid;
+    box-sizing: border-box;
+    background-color: var(--bg-color);
+    color: inherit;
+    transition-property: transform, z-index, left, right, top, bottom;
+    transition-duration: 100ms, 0ms, 200ms, 200ms, 200ms, 200ms;
+    transition-delay: 0ms, 100ms, 0ms, 0ms, 0ms, 0ms;
+  }
+
+  & form {
+    position: relative;
+    border: 2px solid;
+  }
+
+  & .links {
+    display: flex;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 2px;
+    text-align: center;
+
+    & > li {
+      flex: 1;
+      line-height: 1;
+      text-align: center;
+    }
+
+    & a {
+      @mixin text-overflow;
+      &:any-link {
+        color: currentColor;
+        text-decoration-line: none;
+      }
+      &:hover {
+        text-decoration-line: overline;
+        text-decoration-style: double;
+        text-decoration-skip-ink: auto;
+      }
+    }
+  }
+
+  & .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    transition: 200ms;
+  }
+
+  & .desc,
+  & .name {
+    @mixin text-overflow;
+  }
+
+  & .desc {
+    font-size: 0.7vw;
+    padding-left: .1vw;
+    padding-right: .1vw;
+  }
+
+  & .name {
+    font-size: 1.7vw;
+    line-height: 1.2;
+  }
+
+  & .number {
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 2px;
+  }
+
+  & input[type='radio'] {
+    -webkit-appearance: none;
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+    outline: none;
+
+    &.activate {
+      &:hover ~ .square {
+        z-index: 2;
+        transform: scale(1.35);
+        transition-delay: 0ms;
+        outline: none;
+        pointer-events: none;
+      }
+
+      &:checked ~ .square {
+        z-index: 3;
+        border-style: none;
+        background-color: color-mod(var(--bg-color) a(75%));
+        transition-duration: 500ms, 0ms, 200ms, 200ms, 200ms, 200ms;
+        transition-delay: 0ms;
+        pointer-events: all;
+        cursor: pointer;
+
+        & .label {
+          transition-duration: 500ms;
+          transform: scale(0.75);
+        }
+
+        & form {
+          transform: scale(4);
+          max-width: var(--cell-max-width);
+          max-height: var(--cell-max-width);
+        }
+      }
+    }
+
+    &.deactivate {
+      z-index: 1;
+      position: fixed;
+      display: block;
+      opacity: 0;
+      pointer-events: none;
+
+      &:checked ~ .square {
+        z-index: 1;
+      }
+    }
+  }
+}
