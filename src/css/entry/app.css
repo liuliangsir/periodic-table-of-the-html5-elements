@@ -1,6 +1,7 @@
 @import '../compose.css';
-@import '../component/element.css';
 @import '../base/color.css';
+@import '../component/element.css';
+@import '../component/switcher.css';
 
 :global(body) {
   overflow-wrap: break-word;
@@ -13,19 +14,47 @@
   overflow: hidden;
   padding: 2%;
   & > input {
+    appearance: none;
     position: fixed;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    overflow: hidden;
-    clip-path: circle(0);
-    clip: rect(0, 0, 0, 0);
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    cursor: pointer;
   }
 }
 
 :global(.table-container) {
   display: grid;
   grid-template-columns: repeat(var(--column-count), 1fr);
-  grid-gap: calc(var(--grid-gap) * 1px);
+  grid-template-rows: repeat(var(--row-count), var(--cell-max-width));
+  grid-row-gap: calc(var(--grid-gap) * 1px);
+  grid-column-gap: calc(var(--grid-gap) * 1px);
 }
+
+:global(.categories) {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  grid-area: 1/3/span 1/16;
+  font-size: .8vw;
+  pointer-events: none;
+}
+
+:global(.category) {
+  opacity: 0.85;
+  transition-duration: 120ms;
+  &:hover {
+    opacity: 1;
+  }
+  & label {
+    cursor: pointer;
+    pointer-events: all;
+  }
+}
+
