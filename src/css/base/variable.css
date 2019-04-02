@@ -13,4 +13,9 @@
   --other-nonmetal-color: #52ee61;
   --noble-gasses-color: #759fff;
   --cell-max-width: calc((96vw - (var(--column-count) - 1) * var(--grid-gap) * 1px) / var(--column-count));
+  --phone: 320;
+  --tablet: 768;
+  --desktop: 1024;
+  --medium-desktop: 1440;
+  --retina-desktop: 1920;
 }

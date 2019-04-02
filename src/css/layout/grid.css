@@ -2,3 +2,11 @@
   :global(.r$(i)) { grid-row: $(i); }
   :global(.c$(i)) { grid-column: $(i); }
 }
+
+@custom-media --viewport-small-phone (width < 320px);
+@custom-media --viewport-phone (320px <= width < 768px);
+@custom-media --viewport-tablet (768px <= width < 1024px);
+@custom-media --viewport-desktop (1024px <= width < 1440px);
+@custom-media --viewport-medium-desktop (1440px <= width < 1920px);
+@custom-media --viewport-retina (width >= 1920px);
+

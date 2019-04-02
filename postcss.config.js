@@ -22,6 +22,7 @@ module.exports = ({ file }) => ({
         'color-mod-function': { unresolved: 'warn' },
         'custom-properties': { preserve: false },
         'system-ui-font-family': { family: 'system-ui, Helvetica Neue' },
+        'custom-media-queries': true,
       },
       insertBefore: {
         'all-property': unprefix,

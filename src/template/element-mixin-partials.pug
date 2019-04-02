@@ -8,10 +8,15 @@ mixin elementGenerator(number, name, desc, links, classname, column, row)
         dl(class=`${localIdentName.info}`)
           dd(class=`${localIdentName.name}`, title=`${name}`)= name
           dt(class=`${localIdentName.desc}`, title=`${desc}`)= desc
+        ol.characters-container
+          li.characters
+            - const characters = desc.split('').filter(char => char.trim());
+            each character, index in characters
+              i(class='character' style=`transform:rotate(${360 / characters.length * index}deg);`) #{character}
         ul(class=`${localIdentName.links}`)
           each link, index in links.reverse()
             if index < 1 && links.length > 1
-              li: a(href=link target='_blank') MDN
+              li: a(href=link target='_blank' role='link' rel='noopener' title='ready to go MDN official website') MDN
             else
-              li: a(href=link target='_blank') W3C
+              li: a(href=link target='_blank' role='link' rel='noopener' title='ready to go W3C official website') W3C
     input(type='radio', name='elements', class=`${localIdentName.deactivate}`)
