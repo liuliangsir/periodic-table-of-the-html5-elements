@@ -1,0 +1,14 @@
+:root {
+  --grid-gap: 5px;
+  --bg-color: #101318;
+  --alkali-metal-color: #ecbe59;
+  --alkaline-earth-metal-color: #dee955;
+  --lanthanoid-color: #ec77a3;
+  --actinoid-color: #c686cc;
+  --transition-metal-color: #fd8572;
+  --post-transition-metal-color: #4cddf3;
+  --metalloid-color: #3aefb6;
+  --other-nonmetal-color: #52ee61;
+  --noble-gas-color: #759fff;
+  --unknown-color: #ccc;
+}
