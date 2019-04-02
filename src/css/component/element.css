@@ -2,8 +2,6 @@
   position: relative;
   font-size: 0.5vw;
   padding-bottom: 100%;
-  cursor: pointer;
-  color: #fff;
   transition-duration: 500ms;
 
   & .square,
@@ -41,7 +39,6 @@
     right: 0;
     bottom: 0;
     padding: 2px;
-    list-style-type: none;
     text-align: center;
 
     & > li {
@@ -116,17 +113,14 @@
         pointer-events: none;
       }
 
-      &:checked ~ input[type='radio'].deactivate {
-        z-index: 100;
-        pointer-events: all;
-      }
-
       &:checked ~ .square {
         z-index: 3;
         border-style: none;
         background-color: color-mod(var(--bg-color) a(75%));
         transition-duration: 500ms, 0ms, 200ms, 200ms, 200ms, 200ms;
         transition-delay: 0ms;
+        pointer-events: all;
+        cursor: pointer;
 
         & .label {
           transition-duration: 500ms;
@@ -135,8 +129,8 @@
 
         & form {
           transform: scale(4);
-          max-width: var(--form-max-width);
-          max-height: var(--form-max-width);
+          max-width: var(--cell-max-width);
+          max-height: var(--cell-max-width);
         }
       }
     }

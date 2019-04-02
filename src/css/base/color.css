@@ -1,35 +1,44 @@
-:global(.alkali-metal) {
+.metadata-and-scripting,
+:global(.metadata-and-scripting) {
   color: var(--alkali-metal-color);
 }
 
-:global(.alkaline-earth-metal) {
+.text-level-semantics,
+:global(.text-level-semantics) {
   color: var(--alkaline-earth-metal-color);
 }
 
-:global(.lanthanoid) {
+.embedding-content,
+:global(.embedding-content) {
   color: var(--lanthanoid-color);
 }
 
-:global(.actinoid) {
+.document-sections,
+:global(.document-sections) {
   color: var(--actinoid-color);
 }
 
-:global(.transition-metal) {
+.grouping-content,
+:global(.grouping-content) {
   color: var(--transition-metal-color);
 }
 
-:global(.post-transition-metal) {
+.forms,
+:global(.forms) {
   color: var(--post-transition-metal-color);
 }
 
-:global(.metalloid) {
+.interactive-elements,
+:global(.interactive-elements) {
   color: var(--metalloid-color);
 }
 
-:global(.other-nonmetal) {
+.root-element,
+:global(.root-element) {
   color: var(--other-nonmetal-color);
 }
 
-:global(.noble-gas) {
-  color: var(--noble-gas-color);
+.tabular-data,
+:global(.tabular-data) {
+  color: var(--noble-gasses-color);
 }
