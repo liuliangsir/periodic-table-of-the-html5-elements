@@ -18,7 +18,8 @@
     "semantic-release": "semantic-release",
     "test": "echo \"Error: no test specified\" && exit 1",
     "commit-message": "git-cz",
-    "predeploy": "npm run lint && npm run build",
+    "transfer": "cp CNAME dist",
+    "predeploy": "npm run lint && npm run build && npm run transfer",
     "deploy": "node ./scripts/deploy.js"
   },
   "dependencies": {
