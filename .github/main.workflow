@@ -17,19 +17,19 @@ action "npm ci" {
 action "npm lint" {
   uses = "actions/npm@59b64a598378f31e49cb76f27d6f3312b582f680"
   needs = ["npm ci"]
-  args = "lint"
+  args = "run lint"
 }
 
 action "npm build" {
   uses = "actions/npm@59b64a598378f31e49cb76f27d6f3312b582f680"
   needs = ["npm lint"]
-  args = "build"
+  args = "run build"
 }
 
 action "npm transfer" {
   uses = "actions/npm@59b64a598378f31e49cb76f27d6f3312b582f680"
   needs = ["npm build"]
-  args = "transfer"
+  args = "run transfer"
 }
 
 action "liuliangsir/periodic-table-of-the-html5-elements@master" {
