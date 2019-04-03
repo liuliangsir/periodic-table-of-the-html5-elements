@@ -20,7 +20,7 @@ Make sure you have installed all of the following prerequisites on your developm
 
 ### Installing
 
-- Clone this repository to your local machine with [https](https://github.com/liuliangsir/periodic-table-of-the-html5-elements.git) or [ssh](git@github.com:liuliangsir/periodic-table-of-the-html5-elements.git)
+- Clone this repository to your local machine with **https** or **ssh**
 
 - Install npm packages
 
@@ -48,7 +48,7 @@ Note: you might need to provide the following variables: `GITHUB_TOKEN` and `PUB
   - Fork this repository!
 
 - **Option 2**
-  - Clone this repository to your local machine with [https](https://github.com/liuliangsir/periodic-table-of-the-html5-elements.git) or [ssh](git@github.com:liuliangsir/periodic-table-of-the-html5-elements.git)
+  - Clone this repository to your local machine with **https** or **ssh**
 
 ### Step 2
 
