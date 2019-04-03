@@ -17,6 +17,6 @@ html
         input.category-cancel(type='radio', id='cancel' name='categories')
         .table-container
           include ./template/element-partials
-          ol.categories
+          ol.categories.hidden-less-than-desktop
             each category in locals.categories
               li.category(class=category): label(for=category) #{category}

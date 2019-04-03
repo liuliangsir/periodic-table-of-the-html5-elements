@@ -1,5 +1,6 @@
 /* eslint-disable import/no-extraneous-dependencies */
 const unprefix = require('postcss-unprefix');
+const sortingOption = require('./sorting.config');
 
 module.exports = ({ file }) => ({
   parser: file.extname === '.sss' ? 'sugarss' : false,
@@ -28,5 +29,6 @@ module.exports = ({ file }) => ({
         'all-property': unprefix,
       },
     },
+    'postcss-sorting': sortingOption,
   },
 });
