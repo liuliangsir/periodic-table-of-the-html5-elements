@@ -2,7 +2,7 @@ include ./template/variable-partials
 include ./template/element-mixin-partials
 include ./template/placeholder-mixin-partials
 
-- locals.localIdentName = require('!isomorphic-style-loader!css-loader?modules=true&localIdentName=[path][name]__[local]--[hash:base64:5]&hashPrefix=hash!postcss-loader?ident=postcss!CSS/entry/app.css');
+- locals.localIdentName = require('!isomorphic-style-loader!css-loader?modules=true&localIdentName=[local]--[hash:base64:5]&hashPrefix=hash!postcss-loader?ident=postcss!CSS/entry/app.css');
 doctype html
 html
   head
