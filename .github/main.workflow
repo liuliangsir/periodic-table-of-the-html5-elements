@@ -1,6 +1,6 @@
 workflow "build and deploy" {
   on = "push"
-  resolves = ["liuliangsir/periodic-table-of-the-html5-elements@master"]
+  resolves = ["deploy"]
 }
 
 action "npm prune" {
@@ -32,8 +32,8 @@ action "npm transfer" {
   args = "transfer"
 }
 
-action "liuliangsir/periodic-table-of-the-html5-elements@master" {
-  uses = "liuliangsir/periodic-table-of-the-html5-elements@master"
+action "deploy" {
+  uses = "nchaulet/github-action-gh-pages@master"
   needs = ["npm transfer"]
   secrets = ["GITHUB_TOKEN"]
   env = {
