@@ -1,6 +1,6 @@
-@define-mixin text-overflow {
+@define-mixin text-overflow $property: overflow {
   max-width: 100%;
-  overflow: hidden;
+  $(property): hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
