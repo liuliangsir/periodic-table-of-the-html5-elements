@@ -1,0 +1,9 @@
+@custom-media --viewport-less-than-phone (width <= 320px);
+@custom-media --viewport-phone (320px < width <= 768px);
+@custom-media --viewport-less-than-tablet (width <= 768px);
+@custom-media --viewport-tablet (768px < width <= 1024px);
+@custom-media --viewport-less-than-desktop (width <= 1024px);
+@custom-media --viewport-desktop (1024px < width <= 1440px);
+@custom-media --viewport-less-than-medium-desktop (width <= 1440px);
+@custom-media --viewport-medium-desktop (1440px < width <= 1920px);
+@custom-media --viewport-retina (width > 1920px);
