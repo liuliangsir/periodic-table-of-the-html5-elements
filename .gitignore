@@ -131,3 +131,6 @@ typings/
 
 # dist
 dist
+
+# stats
+stats.json

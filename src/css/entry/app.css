@@ -30,7 +30,7 @@
 :global(.table-container) {
   display: grid;
   grid-template-columns: repeat(var(--column-count), 1fr);
-  grid-template-rows: repeat(var(--row-count), var(--cell-max-width));
+  grid-template-rows: repeat(var(--row-count), var(--cell-width));
   grid-row-gap: calc(var(--grid-gap) * 1px);
   grid-column-gap: calc(var(--grid-gap) * 1px);
 }
@@ -43,10 +43,6 @@
   grid-area: 1/3/span 1/16;
   font-size: .8vw;
   pointer-events: none;
-
-  @media (--viewport-desktop) {
-    grid-column: 2 / span 15;
-  }
 }
 
 :global(.category) {
