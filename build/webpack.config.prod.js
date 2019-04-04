@@ -6,6 +6,7 @@ const HashedModuleIdsPlugin = require('webpack/lib/HashedModuleIdsPlugin');
 const DefinePlugin = require('webpack/lib/DefinePlugin');
 const WebpackMd5Hash = require('webpack-md5-hash');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+const Visualizer = require('webpack-visualizer-plugin');
 // const InlineManifestWebpackPlugin = require('inline-manifest-webpack-plugin');
 const webpack = require('webpack');
 const cssnano = require('cssnano');
@@ -65,6 +66,7 @@ webpackConfig.plugins = [
   }),
   // new InlineManifestWebpackPlugin('manifest'),
   new WebpackMd5Hash(),
+  new Visualizer(),
 ].concat(webpackConfig.plugins);
 
 webpackConfig.output.filename = '[name].[chunkhash].js';

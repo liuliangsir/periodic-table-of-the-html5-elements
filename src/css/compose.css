@@ -1,7 +1,8 @@
 @import 'base/variable.css';
 @import 'base/reset.css';
 @import 'base/font.css';
-@import 'layout/grid.css';
-@import 'util/mixin.css';
 @import 'util/function.css';
+@import 'util/mixin.css';
+@import 'layout/media.css';
+@import 'layout/grid.css';
 @import 'component/animation.css';
