@@ -1,6 +1,6 @@
 {
   "name": "periodic-table-of-the-html5-elements",
-  "version": "1.0.1",
+  "version": "1.0.2-alpha.0",
   "description": "periodic table of the html5 elements created by css grid",
   "author": "liuliang@w3ctech.com",
   "keywords": [
@@ -26,7 +26,7 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.4.2",
-    "core-js": "^3.0.0"
+    "core-js": "^3.0.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.2.3",
