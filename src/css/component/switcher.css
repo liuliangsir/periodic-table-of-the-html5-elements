@@ -7,51 +7,57 @@
   opacity: .15;
   pointer-events: none;
 }
+
 @define-mixin category-switcher {
   opacity: .15;
 }
 
-:global(.category-emit:checked#metadata-and-scripting ~ .table-container) {
-  & :local .element:not(.metadata-and-scripting) {
+:global(.category-emit:checked#metadata-scripting ~ .table-container) {
+  & :local .element:not(.metadata-scripting) {
     @mixin element-switcher;
   }
-  & :global .categories .category:not(.metadata-and-scripting) {
+
+  & :global .categories .category:not(.metadata-scripting) {
     @mixin category-switcher;
   }
 }
 
-:global(.category-emit:checked#text-level-semantics ~ .table-container) {
-  & :local .element:not(.text-level-semantics) {
+:global(.category-emit:checked#inline-text-semantics ~ .table-container) {
+  & :local .element:not(.inline-text-semantics) {
     @mixin element-switcher;
   }
-  & :global .categories .category:not(.text-level-semantics) {
+
+  & :global .categories .category:not(.inline-text-semantics) {
     @mixin category-switcher;
   }
 }
 
-:global(.category-emit:checked#embedding-content ~ .table-container) {
-  & :local .element:not(.embedding-content) {
+:global(.category-emit:checked#image-multimedia-embedded-content ~ .table-container) {
+  & :local .element:not(.image-multimedia-embedded-content) {
     @mixin element-switcher;
   }
-  & :global .categories .category:not(.embedding-content) {
+
+  & :global .categories .category:not(.image-multimedia-embedded-content) {
     @mixin category-switcher;
   }
 }
 
-:global(.category-emit:checked#document-sections ~ .table-container) {
-  & :local .element:not(.document-sections) {
+:global(.category-emit:checked#content-sectioning-root ~ .table-container) {
+  & :local .element:not(.content-sectioning-root) {
     @mixin element-switcher;
   }
-  & :global .categories .category:not(.document-sections) {
+
+  & :global .categories .category:not(.content-sectioning-root) {
     @mixin category-switcher;
   }
 }
 
-:global(.category-emit:checked#grouping-content ~ .table-container) {
-  & :local .element:not(.grouping-content) {
+:global(.category-emit:checked#text-content ~ .table-container) {
+  & :local .element:not(.text-content) {
     @mixin element-switcher;
   }
-  & :global .categories .category:not(.grouping-content) {
+
+  & :global .categories .category:not(.text-content) {
     @mixin category-switcher;
   }
 }
@@ -60,6 +66,7 @@
   & :local .element:not(.forms) {
     @mixin element-switcher;
   }
+
   & :global .categories .category:not(.forms) {
     @mixin category-switcher;
   }
@@ -69,6 +76,7 @@
   & :local .element:not(.interactive-elements) {
     @mixin element-switcher;
   }
+
   & :global .categories .category:not(.interactive-elements) {
     @mixin category-switcher;
   }
@@ -78,6 +86,7 @@
   & :local .element:not(.root-element) {
     @mixin element-switcher;
   }
+
   & :global .categories .category:not(.root-element) {
     @mixin category-switcher;
   }
@@ -87,7 +96,28 @@
   & :local .element:not(.tabular-data) {
     @mixin element-switcher;
   }
+
   & :global .categories .category:not(.tabular-data) {
+    @mixin category-switcher;
+  }
+}
+
+:global(.category-emit:checked#web-components ~ .table-container) {
+  & :local .element:not(.web-components) {
+    @mixin element-switcher;
+  }
+
+  & :global .categories .category:not(.web-components) {
+    @mixin category-switcher;
+  }
+}
+
+:global(.category-emit:checked#obsolete-and-deprecated ~ .table-container) {
+  & :local .element:not(.obsolete-and-deprecated) {
+    @mixin element-switcher;
+  }
+
+  & :global .categories .category:not(.obsolete-and-deprecated) {
     @mixin category-switcher;
   }
 }
