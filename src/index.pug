@@ -6,11 +6,14 @@ include ./template/placeholder-mixin-partials
 doctype html
 html
   head
-    meta(charset="utf-8")
-    meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=6.0, minimum-scale=1.0, shrink-to-fit=no")
+    meta(charset='utf-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=6.0, minimum-scale=1.0, shrink-to-fit=no')
+    meta(name='description' content='periodic table of the html5 elements created by css grid')
+    meta(name='author' content='流浪大法师')
+    meta(name='renderer' content='webkit|ie-comp|ie-stand')
     title=htmlWebpackPlugin.options.title
   body
-    main#main.container(role="main")
+    main#main.container(role='main')
       .wrapper
         each category in locals.categories
           input.category-emit(type='radio', id=category, name='categories')
