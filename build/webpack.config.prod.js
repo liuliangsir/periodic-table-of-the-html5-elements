@@ -73,8 +73,8 @@ webpackConfig.output.filename = '[name].[chunkhash].js';
 webpackConfig.output.chunkFilename = '[name].[chunkhash].chunk.js';
 
 // eslint-disable-next-line  import/no-dynamic-require
-const { address } = require(resolve(commonConfig.rootPath, 'project.config.js'));
-webpackConfig.output.publicPath = address;
+const { publicPath } = require(resolve(commonConfig.rootPath, 'project.config.js'));
+webpackConfig.output.publicPath = publicPath;
 
 // eslint-disable-next-line  import/no-dynamic-require
 const cssProcessorOptions = require(resolve(commonConfig.rootPath, 'cssnano.config.js'));
