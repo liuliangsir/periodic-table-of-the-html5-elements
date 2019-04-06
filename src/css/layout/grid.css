@@ -13,9 +13,11 @@
   @media (--viewport-tablet) {
     --column-count: 6;
   }
+
   @media (--viewport-phone) {
     --column-count: 3;
   }
+
   @media (--viewport-less-than-phone) {
     --column-count: 2;
   }

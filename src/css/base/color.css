@@ -1,25 +1,25 @@
-.metadata-and-scripting,
-:global(.metadata-and-scripting) {
+.metadata-scripting,
+:global(.metadata-scripting) {
   color: var(--alkali-metal-color);
 }
 
-.text-level-semantics,
-:global(.text-level-semantics) {
+.inline-text-semantics,
+:global(.inline-text-semantics) {
   color: var(--alkaline-earth-metal-color);
 }
 
-.embedding-content,
-:global(.embedding-content) {
+.image-multimedia-embedded-content,
+:global(.image-multimedia-embedded-content) {
   color: var(--lanthanoid-color);
 }
 
-.document-sections,
-:global(.document-sections) {
+.content-sectioning-root,
+:global(.content-sectioning-root) {
   color: var(--actinoid-color);
 }
 
-.grouping-content,
-:global(.grouping-content) {
+.text-content,
+:global(.text-content) {
   color: var(--transition-metal-color);
 }
 
@@ -41,4 +41,14 @@
 .tabular-data,
 :global(.tabular-data) {
   color: var(--noble-gasses-color);
+}
+
+.obsolete-and-deprecated,
+:global(.obsolete-and-deprecated) {
+  color: var(--light-gray-color);
+}
+
+.web-components,
+:global(.web-components) {
+  color: var(--light-green-color);
 }

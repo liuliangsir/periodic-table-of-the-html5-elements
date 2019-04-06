@@ -17,6 +17,7 @@ module.exports = {
           esmodules: true,
         },
         useBuiltIns: 'usage',
+        corejs: '3.0.0',
         exclude: ['@babel/plugin-transform-regenerator'],
       },
     ],
