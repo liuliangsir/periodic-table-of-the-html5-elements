@@ -1,3 +1,3 @@
 module.exports = {
-  address: 'https://tools.webfrontend.dev',
+  publicPath: 'https://tools.webfrontend.dev',
 };
