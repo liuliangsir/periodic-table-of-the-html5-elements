@@ -17,7 +17,7 @@ script:
 branches:
   only:
     - master
-    - /^greenkeeper\/.*$/
+    - develop
 
 cache:
   directories:
