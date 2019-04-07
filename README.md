@@ -1,5 +1,6 @@
 # Periodic Table Of The HTML5 Elements
 
+[![Build Status](https://travis-ci.com/liuliangsir/periodic-table-of-the-html5-elements.svg?branch=master)](https://travis-ci.com/liuliangsir/periodic-table-of-the-html5-elements)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/velenir/html-webpack-template-pug/blob/master/LICENSE)
 
@@ -30,9 +31,9 @@ npm ci
 
 ## Deployment
 
-It is most convenient for users who have forked the github repository and would like to deploy the project on [Github Pages](https://pages.github.com/), since that github repository takes full advantage of [Github Action](https://developer.github.com/actions/) and [Travis CI](https://travis-ci.com/). So you only need to do one thing that is pushing the file changes in local master branch to remote repository, whether you are ready to use which solution.
+It may be the most convenient for users who have forked the github repository and would like to deploy the project on [Github Pages](https://pages.github.com/), since that github repository takes full advantage of [Github Pages](https://pages.github.com/) and [Travis CI](https://travis-ci.com/). So you only need to do one thing that is pushing the file changes in local master branch to remote repository.
 
-Note: you might need to provide the following variables: `GITHUB_TOKEN` and `PUBLIC_PATH`. Check out [github-action-gh-pages](https://github.com/nchaulet/github-action-gh-pages/tree/master) for more details on how to deploy a directory on github pages with [Github Action](https://developer.github.com/actions/).
+Note: no github actions have been used in that github repository.
 
 ## Built With
 
