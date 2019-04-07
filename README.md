@@ -2,7 +2,6 @@
 
 [![Build Status](https://travis-ci.com/liuliangsir/periodic-table-of-the-html5-elements.svg?branch=master)](https://travis-ci.com/liuliangsir/periodic-table-of-the-html5-elements)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
-[![Greenkeeper badge](https://badges.greenkeeper.io/liuliangsir/badges.svg)](https://greenkeeper.io/)
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/velenir/html-webpack-template-pug/blob/master/LICENSE)
 
 
