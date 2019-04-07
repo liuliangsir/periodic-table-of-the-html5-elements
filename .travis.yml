@@ -2,12 +2,14 @@ language: node_js
 sudo: required
 dist: trusty
 node_js:
-  - 10.15.3
+  - '10.15.3'
 
 notifications:
   email: false
 
 before_script:
+  - 'git config --global user.name "liuliangsir"'
+  - 'git config --global user.email "2269305724@qq.com"'
   - npm prune
 
 script:
