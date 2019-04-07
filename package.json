@@ -125,6 +125,15 @@
       "initialPrBadge": "Feat: :sparkles:add badge to enable Greenkeeper",
       "initialPrBadgeOnly": "Feat: :sparkles:add Greenkeeper badge",
       "initialSubgroupPR": "Chore: :arrow_up:update dependencies for ${group}"
+    },
+    "commitMessages": {
+      "initialBadge": "Docs: :memo:add Greenkeeper badge",
+      "initialDependencies": "Chore: :gem:update dependencies",
+      "initialBranches": "Feat: :sparkles:whitelist greenkeeper branches",
+      "dependencyUpdate": "Chore: :gem:update ${dependency} to version ${version}",
+      "devDependencyUpdate": "Chore: :gem:update ${dependency} to version ${version}",
+      "dependencyPin": "Fix: :bug:pin ${dependency} to ${oldVersion}",
+      "devDependencyPin": "Fix: :bug:pin ${dependency} to ${oldVersion}"
     }
   },
   "homepage": "https://github.com/liuliangsir/periodic-table-of-the-html5-elements#readme",
