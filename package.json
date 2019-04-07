@@ -1,6 +1,6 @@
 {
   "name": "periodic-table-of-the-html5-elements",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "periodic table of the html5 elements created by css grid",
   "author": "liuliang@w3ctech.com",
   "keywords": [
@@ -11,18 +11,18 @@
     "table"
   ],
   "scripts": {
-    "clean": "rm -rf dist/ .cache-loader/",
     "build": "webpack --config build/webpack.config.prod.js",
     "build:stat": "webpack --config build/webpack.config.prod.js --profile --json > stats.json",
+    "clean": "rm -rf dist/ .cache-loader/",
+    "commit-message": "git-cz",
+    "deploy": "npm run lint && npm run build && npm run transfer",
+    "deploy:travis": "node ./scripts/deploy.js",
     "dev": "PORT=3001 node ./build/server.js",
-    "lint": "node_modules/eslint/bin/eslint.js build/**/*.js src/js/**/*.js scripts/**/*.js *.js",
     "fix": "prettier --single-quote --trailing-comma es5 --write 'build/**/*.js' 'src/js/**/*.js' 'scripts/**/*.js' '*.js'",
+    "lint": "node_modules/eslint/bin/eslint.js build/**/*.js src/js/**/*.js scripts/**/*.js *.js",
     "semantic-release": "semantic-release",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "commit-message": "git-cz",
-    "transfer": "cp CNAME dist",
-    "deploy": "npm run lint && npm run build && npm run transfer",
-    "deploy:travis": "node ./scripts/deploy.js"
+    "transfer": "cp CNAME dist"
   },
   "dependencies": {
     "@babel/runtime": "^7.4.2",
@@ -86,6 +86,13 @@
     "webpack-visualizer-plugin": "^0.1.11"
   },
   "browserslist": {
+    "development": [
+      "last 1 Edge versions",
+      "last 1 Chrome versions",
+      "last 1 Firefox versions",
+      "last 1 Safari versions",
+      "last 1 Opera versions"
+    ],
     "production": [
       "> .5%",
       "ie 9-11",
@@ -94,13 +101,6 @@
       "last 4 Firefox versions",
       "last 4 Safari versions",
       "last 4 Opera versions"
-    ],
-    "development": [
-      "last 1 Edge versions",
-      "last 1 Chrome versions",
-      "last 1 Firefox versions",
-      "last 1 Safari versions",
-      "last 1 Opera versions"
     ]
   },
   "bugs": {
@@ -116,6 +116,16 @@
   },
   "engines": {
     "node": ">=6.14.0"
+  },
+  "greenkeeper": {
+    "prTitles": {
+      "basicPR": "Chore: :arrow_up:update ${dependency} to the latest",
+      "groupPR": "Chore: :arrow_up:update ${dependency} in group ${group} to the latest",
+      "initialPR": "Chore: :arrow_up:update dependencies to enable Greenkeeper",
+      "initialPrBadge": "Feat: :sparkles:add badge to enable Greenkeeper",
+      "initialPrBadgeOnly": "Feat: :sparkles:add Greenkeeper badge",
+      "initialSubgroupPR": "Chore: :arrow_up:update dependencies for ${group}"
+    }
   },
   "homepage": "https://github.com/liuliangsir/periodic-table-of-the-html5-elements#readme",
   "husky": {
