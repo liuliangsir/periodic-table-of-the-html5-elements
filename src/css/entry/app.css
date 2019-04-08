@@ -3,7 +3,7 @@
 @import '../component/element.css';
 @import '../component/switcher.css';
 
-:global(body) {
+body {
   overflow-wrap: break-word;
   background-color: var(--bg-color);
   text-shadow: 0 0 0.4vw currentColor;

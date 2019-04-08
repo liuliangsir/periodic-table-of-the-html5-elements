@@ -1,5 +1,4 @@
 /* eslint-disable import/no-extraneous-dependencies */
-
 const ghPages = require('gh-pages');
 const localGitConfigAccessor = require('gitconfiglocal');
 
