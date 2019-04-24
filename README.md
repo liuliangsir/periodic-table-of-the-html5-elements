@@ -5,12 +5,11 @@
 [![Greenkeeper badge](https://badges.greenkeeper.io/liuliangsir/periodic-table-of-the-html5-elements.svg)](https://greenkeeper.io/)
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/velenir/html-webpack-template-pug/blob/master/LICENSE)
 
-
 This is a periodic table for the HTML5 elements. Inspired by another demos, [Periodic Table of Elements - HTML/CSS](https://codepen.io/ankit567/pen/wxbYXE) and [Periodic Table of the HTML5 Elements](http://www.xuanfengge.com/funny/html5/element/).
 
 ## Getting Started
 
-These instructions below will get you a copy of the project up and running on your local machine for development. See [deployment section](#deployment) for more details on how to deploy the project on [Github Pages](https://pages.github.com/) or your own deploy environment like Ubuntu.
+These instructions below will get you a copy of the project up and running on your local machine for development. See [deployment section](#deployment) for more details for how to deploy the project on [Github Pages](https://pages.github.com/) or your own deploy environment like Ubuntu.
 
 ### Prerequisites
 
@@ -32,7 +31,7 @@ npm ci
 
 ## Deployment
 
-It may be the most convenient for users who have forked the github repository and would like to deploy the project on [Github Pages](https://pages.github.com/), since that github repository takes full advantage of [Github Pages](https://pages.github.com/) and [Travis CI](https://travis-ci.com/). So you only need to do one thing that is pushing the file changes in local master branch to remote repository.
+It may be the most convenient for users who have forked the github repository and would like to deploy the project on [Github Pages](https://pages.github.com/), since that github repository takes full advantage of [Github Pages](https://pages.github.com/) and [Travis CI](https://travis-ci.com/). So you only need to do one thing that is to push the file changes in local master branch to remote repository.
 
 Note: no github actions have been used in that github repository.
 
@@ -54,7 +53,7 @@ Note: no github actions have been used in that github repository.
 
 ### Step 2
 
-- **HACK AWAY!**
+- **Feel free to hack away!**
 
 ### Step 3
 
@@ -68,7 +67,7 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 ## Authors
 
-* **流浪大法师** - *Initial work* - [liuliangsir](https://github.com/liuliangsir)
+* **流浪大法师** - [liuliangsir](https://github.com/liuliangsir)
 
 See also the list of [contributors](https://github.com/liuliangsir/periodic-table-of-the-html5-elements/graphs/contributors) who participated in this project.
 
