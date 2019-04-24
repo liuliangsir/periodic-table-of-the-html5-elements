@@ -5,7 +5,7 @@ module.exports = {
       // rule
       2, // [1] level
       'always', // [2] applicability
-      ['config'], // [3] value
+      ['config', 'README.md'], // [3] value
     ],
     'type-enum': [
       // rule
