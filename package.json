@@ -59,7 +59,7 @@
     "husky": "^2.0.0",
     "inline-manifest-webpack-plugin": "^4.0.2",
     "isomorphic-style-loader": "^5.0.1",
-    "mini-css-extract-plugin": "^0.6.0",
+    "mini-css-extract-plugin": "^0.7.0",
     "optimize-css-assets-webpack-plugin": "^5.0.1",
     "postcss-at-rules-variables": "^0.1.7",
     "postcss-calc": "^7.0.1",
