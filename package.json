@@ -40,7 +40,7 @@
     "babel-loader": "^8.0.5",
     "cache-loader": "^3.0.0",
     "chokidar": "^3.0.0",
-    "clean-webpack-plugin": "^2.0.1",
+    "clean-webpack-plugin": "^3.0.0",
     "commitizen": "^3.0.7",
     "commitlint-config-cz": "^0.11.1",
     "css-loader": "^2.1.1",
