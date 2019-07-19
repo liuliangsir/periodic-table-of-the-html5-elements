@@ -53,7 +53,7 @@ Note: no github actions have been used in that github repository.
 
 ### Step 2
 
-- **Feel free to hack away!**
+- Feel free to hack away
 
 ### Step 3
 
