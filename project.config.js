@@ -1,3 +1,3 @@
 module.exports = {
-  publicPath: 'https://tools.webfrontend.dev',
+  publicPath: 'https://html5.tool.webfrontend.dev',
 };
