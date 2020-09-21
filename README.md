@@ -9,7 +9,7 @@ This is a periodic table for the HTML5 elements. Inspired by another demos, [Per
 
 ## Getting Started
 
-These instructions below will get you a copy of the project up and running on your local machine for development. See [deployment section](#deployment) for more details for how to deploy the project on [Github Pages](https://pages.github.com/) or your own deploy environment like Ubuntu.
+These instructions below will get you a copy of the project up and running on your local machine for development. See [deployment section](#deployment) for more details about how to deploy the project on [Github Pages](https://pages.github.com/) or your own deploy environment like Ubuntu.
 
 ### Prerequisites
 
@@ -53,7 +53,7 @@ Note: no github actions have been used in that github repository.
 
 ### Step 2
 
-- **Feel free to hack away!**
+- Feel free to hack away
 
 ### Step 3
 
