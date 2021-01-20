@@ -19,7 +19,7 @@
     "deploy:travis": "node ./scripts/deploy.js",
     "dev": "PORT=3001 node ./build/server.js",
     "fix": "prettier --single-quote --trailing-comma es5 --write 'build/**/*.js' 'src/js/**/*.js' 'scripts/**/*.js' '*.js'",
-    "lint": "node_modules/eslint/bin/eslint.js build/**/*.js src/js/**/*.js scripts/**/*.js *.js",
+    "lint": "eslint build/**/*.js src/js/**/*.js scripts/**/*.js *.js",
     "semantic-release": "semantic-release",
     "test": "echo \"Error: no test specified\" && exit 1",
     "transfer": "cp CNAME dist"
