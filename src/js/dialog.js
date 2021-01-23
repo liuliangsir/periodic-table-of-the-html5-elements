@@ -12,6 +12,8 @@
 
         result = dialogElement.showModal();
       } else {
+        dialogElement.removeAttribute('style');
+
         result = dialogElement.close('close') || (deactivateElement.checked = true);
       }
 
