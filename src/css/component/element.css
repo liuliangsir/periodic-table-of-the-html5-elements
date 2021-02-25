@@ -44,15 +44,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    top: 0;
     box-sizing: border-box;
     border: 2px solid;
     padding: 0;
-    background-color: var(--bg-color);
     color: inherit;
     transition-property: transform, z-index, left, right, top, bottom;
-    transition-duration: 100ms, 0ms, 200ms, 200ms, 200ms, 200ms;
-    transition-delay: 0ms, 100ms, 0ms, 0ms, 0ms, 0ms;
   }
 
   & form {
