@@ -8,7 +8,7 @@
 
       let result;
       if (/(?<!de)activate/.test(target.className)) {
-        dialogElement.style.cssText = `height: ${doc.body.scrollHeight}px;`;
+        dialogElement.style.cssText = `margin: initial;height: ${doc.body.scrollHeight}px;`;
 
         result = dialogElement.showModal();
       } else {
