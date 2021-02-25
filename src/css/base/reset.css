@@ -26,6 +26,8 @@ dd {
 }
 
 dialog {
+  max-height: fit-content;
+
   &::backdrop {
     transition-duration: 500ms;
   }
